@@ -18,25 +18,54 @@ int main() {
 
     moving_image im;
 
-    cout << "Generando secuencia move_down (10 frames)..." << endl;
-    for (int i = 1; i <= 10; i++) {
-        im.move_down(10);
+    cout << "Probando movimientos basicos (secuencias)..." << endl;
+    for (int i = 1; i <= 5; i++) {
+        im.move_left(20);
+        string nombre = "move_left_" + to_string(i) + ".png";
+        im.draw(nombre.c_str());
+    }
+
+    for (int i = 1; i <= 5; i++) {
+        im.move_right(20);
+        string nombre = "move_right_" + to_string(i) + ".png";
+        im.draw(nombre.c_str());
+    }
+
+    for (int i = 1; i <= 5; i++) {
+        im.move_up(20);
+        string nombre = "move_up_" + to_string(i) + ".png";
+        im.draw(nombre.c_str());
+    }
+
+    for (int i = 1; i <= 5; i++) {
+        im.move_down(20);
         string nombre = "move_down_" + to_string(i) + ".png";
         im.draw(nombre.c_str());
     }
 
-    cout << "Generando secuencia rotate (4 frames)..." << endl;
     for (int i = 1; i <= 4; i++) {
         im.rotate();
         string nombre = "rotate_" + to_string(i) + ".png";
         im.draw(nombre.c_str());
     }
 
-    cout << "Añadiendo mas movimientos a la cola..." << endl;
-    for (int i = 0; i < 20; i++) im.move_right(10);
-    for (int i = 0; i < 20; i++) im.move_up(10);
+    cout << "Probando undo y redo..." << endl;
+    im.undo();
+    im.draw("undo_1.png");
+    im.undo();
+    im.draw("undo_2.png");
+    im.redo();
+    im.draw("redo_1.png");
+    im.redo();
+    im.draw("redo_2.png");
 
-    cout << "Ejecutando repeat_all..." << endl;
+    cout << "Probando repeat..." << endl;
+    im.repeat();
+    im.draw("repeat_1.png");
+    im.repeat();
+    im.draw("repeat_2.png");
+
+    cout << "Ejecutando repeat_all (pelicula)..." << endl;
     im.repeat_all();
 
     cout << "¡Terminado! Revisa tu carpeta." << endl;

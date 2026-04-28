@@ -2,6 +2,11 @@
 
 Este repo es la entrega del laboratorio 1 de Estructura de Datos. La clase `moving_image` trabaja con matrices RGB y permite mover y rotar la imagen, ademas de manejar historial de movimientos.
 
+## Integrantes
+
+- Nicolas Renato Ricciardi Acuna
+- Enzo Gabriel Levancini Arriagada
+
 ## Archivos
 
 - `moving_image.h`: clase principal y metodos nuevos.
