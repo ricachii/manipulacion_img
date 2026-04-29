@@ -68,7 +68,7 @@ int main() {
     cout << "Ejecutando repeat_all (pelicula)..." << endl;
     im.repeat_all();
 
-    cout << "¡Terminado! Revisa tu carpeta." << endl;
+    cout << "Terminado! Revisa tu carpeta." << endl;
     
     return 0;
 }
